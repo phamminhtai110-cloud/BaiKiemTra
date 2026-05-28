@@ -2,65 +2,65 @@
 
 print("===== CÂU 1: TÍNH TIỀN THANH TOÁN =====")
 
-don_gia = float(input("Nhập đơn giá sản phẩm: "))
-so_luong = int(input("Nhập số lượng mua: "))
+price = float(input("Nhập đơn giá sản phẩm: "))
+quantity = int(input("Nhập số lượng mua: "))
 
-tong_tien = don_gia * so_luong
+total = price * quantity
 
-if tong_tien >= 1000000:
-    giam_gia = tong_tien * 0.1
-    thanh_toan = tong_tien - giam_gia
+if total >= 1000000:
+    sale_off = toltal * 0.1
+    pay = total - sale_off
     print("Khách hàng được giảm giá 10%")
 else:
-    giam_gia = 0
-    thanh_toan = tong_tien
+    sale_off = 0
+    pay = total
     print("Không được giảm giá")
 
-print("Tổng tiền ban đầu:", tong_tien)
-print("Số tiền giảm:", giam_gia)
-print("Số tiền phải thanh toán:", thanh_toan)
+print("Tổng tiền ban đầu:", total)
+print("Số tiền giảm:", sale_off)
+print("Số tiền phải thanh toán:", pay)
 
 
 
 print("\n===== CÂU 2: HỆ THỐNG ĐĂNG NHẬP =====")
 
-mat_khau_dung = "123456"
-so_lan_sai = 0
+password = "123456"
+wrongs = 0
 
-while so_lan_sai < 3:
-    mat_khau = input("Nhập mật khẩu: ")
+while wrongs_time < 3:
+    password = input("Nhập mật khẩu: ")
 
-    if mat_khau == mat_khau_dung:
+    if password == right_password:
         print("Đăng nhập thành công!")
         break
     else:
-        so_lan_sai += 1
+        wrongs_time += 1
         print("Mật khẩu sai, vui lòng nhập lại!")
         print("Số lần nhập sai còn lại:", 3 - so_lan_sai)
 
-if so_lan_sai == 3:
+if wrongs_time == 3:
     print("Tài khoản đã bị khóa!")
 
 
 
 print("\n===== CÂU 3: THỐNG KÊ LÔ HÀNG =====")
 
-tong_san_pham = 0
-so_thung_hop_le = 0
+total = 0
+valid_bin_number = 0
 
 while True:
-    so_luong = int(input("Nhập số lượng sản phẩm của thùng: "))
+    quantity = int(input("Nhập số lượng sản phẩm của thùng: "))
 
-    if so_luong < 0:
+    if quantity < 0:
         print("Số lượng không hợp lệ, bỏ qua thùng này!")
 
-    elif so_luong == 0:
+    elif quantity == 0:
         print("Kết thúc kiểm đếm!")
         break
 
     else:
-        tong_san_pham += so_luong
-        so_thung_hop_le += 1
+        total += quantity
+        valid_bin_number += 1
         print("Đã thêm", so_luong, "sản phẩm vào hệ thống")
         break
 
