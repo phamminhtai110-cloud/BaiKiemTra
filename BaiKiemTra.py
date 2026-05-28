@@ -62,6 +62,7 @@ while True:
         tong_san_pham += so_luong
         so_thung_hop_le += 1
         print("Đã thêm", so_luong, "sản phẩm vào hệ thống")
+        break
 
 print("\n===== KẾT QUẢ THỐNG KÊ =====")
 print("Tổng số thùng hàng hợp lệ đã đếm:", so_thung_hop_le)
